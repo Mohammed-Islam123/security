@@ -1,0 +1,1 @@
+Select * form users where name ="" AND password =""; 

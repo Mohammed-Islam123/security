@@ -1,0 +1,2 @@
+after intercepting all the requests while trying all the possible usernames , go to burp and search for the responce that does not contain 
+the string 'Invalid username or password.' and you will find one request that does not contian the trailing dot : 'Invalid username or password'

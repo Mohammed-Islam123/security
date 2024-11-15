@@ -1,0 +1,11 @@
+Suspicious usernames:
+arkansas
+vagrant
+at
+user
+test
+austin
+albuquerque
+af
+as400
+argentina

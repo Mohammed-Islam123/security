@@ -1,0 +1,15 @@
+#limitation on usign the union operator 
+        The `UNION` operator in SQL is used to combine the result sets of two or more `SELECT` statements. However, it has several limitations:
+
+    1. **Column Number and Order**: Each `SELECT` statement within the `UNION` must have the same number of columns in the result sets, and these columns must have similar data types. Moreover, the columns in each `SELECT` statement must be in the same order.
+
+# How I solved it
+    First of all, I go to remarket dots. Is that The application Pause a firewall that filters and detects. Common SQL Key words So we need to use Hugs entities. Two bypass this which will be converted later. To normal Characters. 
+    Second. We have to know that. The Union Keyword which will be using Must be used between two queries. We had the same Number of Columns. So we need to know the number of columns in the first table. To do this We'll use The next query "UNION SELECT null from users " Each soil We will add a new null column And monitor the response. We were not Notice that. When will you When we used to Just one null column. The response continues the null Word and the number of Remaining elements in this But when we add another knob column, the response continue zero units, which mean the Products table contains just one Column 
+    Knowing The The target's table name His users. And it contains two columns in each are user name and Password We can create. Payload. Like it is. 
+    The first one will Help us know all the user names of the application: UNION SELECT password FROM users
+    The second one will Help us know all the passwords of the application UNION SELECT username FROM users 
+    The final one Will it give us The username and password of the admin: UNION SELECT password FROM users WHERE username='administrator' 
+you Can also use this payload from the beginning : UNION SELECT username || '~' ||  password FROM users(
+    This part of the query selects two columns from the users table, username and password. The || operator is used to concatenate the username and password fields with a tilde (~) in between. This means for each row in the users table, it creates a string that combines the username and password, separated by a tilde.
+)
