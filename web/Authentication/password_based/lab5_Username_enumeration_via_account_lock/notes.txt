@@ -1,0 +1,7 @@
+After running the script and inspecting the reponces you will notice there is some responces with different responce lengths , 
+    this means that an account with the specified request exists 
+    the failed ettempts limit: 3
+    now time to brute force his password
+    even though after 3 attempts the account will be blocked keep trying all the provided passwords 
+    after inspecting the responces you will find that one of them does not have any error message make note of this password 
+    after one minute login with these cridentials

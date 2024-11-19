@@ -1,0 +1,4 @@
+when you inspect the requst payload note that it is a json object containig a password key 
+ when you provide an array containing all the provided passwords and send a request with this payload you will get a 302 response code meaning that this is the logic flaw 
+    we have been looking for (the server side code possibly iterates over the password value insted of reading directly the value )
+    after finding about this you can perform a binary seach over the list by elemenating the half of it until you find the correct passowrd!!
